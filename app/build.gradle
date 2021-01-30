@@ -26,6 +26,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    packagingOptions {
+        pickFirst 'META-INF/LICENSE.txt' // picks the JavaMail license file
+    }
 }
 
 dependencies {
@@ -38,4 +41,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.mikhaellopez:circularimageview:4.2.0'
+    implementation 'com.sun.mail:android-mail:1.6.2'
+    implementation 'com.sun.mail:android-activation:1.6.2'
 }

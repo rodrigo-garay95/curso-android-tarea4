@@ -19,6 +19,7 @@
     <string name="nombreBotonEnviarComentario">Enviar Comentario</string>
     <string name="tituloContacto">Contacto</string>
     <string name="tituloAcercade">Acerca de</string>
+    <string name="tituloKodi">Kodi</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

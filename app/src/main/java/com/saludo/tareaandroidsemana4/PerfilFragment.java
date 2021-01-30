@@ -4,6 +4,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -12,12 +14,18 @@ import android.view.ViewGroup;
 
 import com.mikhaellopez.circularimageview.CircularImageView;
 
+import java.util.ArrayList;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link PerfilFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class PerfilFragment extends Fragment {
+
+    private RecyclerView rvPerfil;
+    ArrayList<Mascota> mascotas;
+    public Adaptador adaptador;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -88,6 +96,36 @@ public class PerfilFragment extends Fragment {
         circularImageView.setShadowColor(Color.BLUE);
         circularImageView.setShadowGravity(CircularImageView.ShadowGravity.CENTER);
 
+        rvPerfil = (RecyclerView) v.findViewById(R.id.rvPerfil);
+
+        GridLayoutManager glm = new GridLayoutManager(getActivity(), 2);
+        //llm.setOrientation(LinearLayoutManager.VERTICAL);
+        rvPerfil.setLayoutManager(glm);
+
+        inicializarListaContactos();
+        inicializarAdaptador();
+
         return v;
+
     }
+
+    public void inicializarAdaptador(){
+
+        AdaptadorPerfil adaptador = new AdaptadorPerfil(mascotas, getActivity());
+        rvPerfil.setAdapter(adaptador);
+
+    }
+
+    public void inicializarListaContactos(){
+
+        mascotas = new ArrayList<Mascota>();
+        mascotas.add(new Mascota("Kodi", R.drawable.kodi, 4));
+        mascotas.add(new Mascota("Kodi", R.drawable.kodi, 2));
+        mascotas.add(new Mascota("Kodi", R.drawable.kodi, 3));
+        mascotas.add(new Mascota("Kodi", R.drawable.kodi, 5));
+        mascotas.add(new Mascota("Kodi", R.drawable.kodi, 2));
+        mascotas.add(new Mascota("Kodi", R.drawable.kodi, 1));
+
+    }
+
 }
