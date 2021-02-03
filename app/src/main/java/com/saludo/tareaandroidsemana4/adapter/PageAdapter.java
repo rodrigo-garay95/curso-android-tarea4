@@ -1,4 +1,4 @@
-package com.saludo.tareaandroidsemana4;
+package com.saludo.tareaandroidsemana4.adapter;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;

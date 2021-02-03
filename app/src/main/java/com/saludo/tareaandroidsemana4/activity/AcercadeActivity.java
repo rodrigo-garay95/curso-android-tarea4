@@ -1,11 +1,13 @@
-package com.saludo.tareaandroidsemana4;
+package com.saludo.tareaandroidsemana4.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 
-public class Acercade extends AppCompatActivity {
+import com.saludo.tareaandroidsemana4.R;
+
+public class AcercadeActivity extends AppCompatActivity {
 
     private Toolbar miActionBar;
 

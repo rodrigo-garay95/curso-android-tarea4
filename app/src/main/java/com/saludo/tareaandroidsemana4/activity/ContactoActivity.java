@@ -1,4 +1,4 @@
-package com.saludo.tareaandroidsemana4;
+package com.saludo.tareaandroidsemana4.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -11,8 +11,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.saludo.tareaandroidsemana4.R;
 
-public class Contacto extends AppCompatActivity {
+public class ContactoActivity extends AppCompatActivity {
 
     private Toolbar miActionBar;
     private Button enviarComentario;

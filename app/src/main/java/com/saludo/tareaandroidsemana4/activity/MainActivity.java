@@ -1,24 +1,23 @@
-package com.saludo.tareaandroidsemana4;
+package com.saludo.tareaandroidsemana4.activity;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.text.style.ForegroundColorSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.google.android.material.tabs.TabLayout;
+import com.saludo.tareaandroidsemana4.R;
+import com.saludo.tareaandroidsemana4.adapter.PageAdapter;
+import com.saludo.tareaandroidsemana4.fragment.MascotaFragment;
+import com.saludo.tareaandroidsemana4.fragment.PerfilFragment;
 
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         imgFavoritos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent favoritos = new Intent(MainActivity.this, Favoritos.class);
+                Intent favoritos = new Intent(MainActivity.this, FavoritosActivity.class);
                 startActivity(favoritos);
             }
         });
@@ -69,12 +68,12 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
 
             case R.id.mContacto:
-                Intent intent = new Intent(this, Contacto.class);
+                Intent intent = new Intent(this, ContactoActivity.class);
                 startActivity(intent);
                 break;
 
             case R.id.mAcercade:
-                Intent i = new Intent(this, Acercade.class);
+                Intent i = new Intent(this, AcercadeActivity.class);
                 startActivity(i);
                 break;
 

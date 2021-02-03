@@ -1,4 +1,4 @@
-package com.saludo.tareaandroidsemana4;
+package com.saludo.tareaandroidsemana4.fragment;
 
 import android.os.Bundle;
 
@@ -9,7 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+
+import com.saludo.tareaandroidsemana4.R;
+import com.saludo.tareaandroidsemana4.adapter.MascotaAdaptador;
+import com.saludo.tareaandroidsemana4.pojo.Mascota;
 
 import java.util.ArrayList;
 
@@ -22,7 +25,7 @@ public class MascotaFragment extends Fragment {
 
     private RecyclerView rvMascotas;
     ArrayList<Mascota> mascotas;
-    public Adaptador adaptador;
+    public MascotaAdaptador mascotaAdaptador;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -87,8 +90,8 @@ public class MascotaFragment extends Fragment {
 
     public void inicializarAdaptador(){
 
-        Adaptador adaptador = new Adaptador(mascotas, getActivity());
-        rvMascotas.setAdapter(adaptador);
+        MascotaAdaptador mascotaAdaptador = new MascotaAdaptador(mascotas, getActivity());
+        rvMascotas.setAdapter(mascotaAdaptador);
 
     }
 

@@ -1,11 +1,10 @@
-package com.saludo.tareaandroidsemana4;
+package com.saludo.tareaandroidsemana4.fragment;
 
 import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -13,6 +12,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mikhaellopez.circularimageview.CircularImageView;
+import com.saludo.tareaandroidsemana4.R;
+import com.saludo.tareaandroidsemana4.adapter.MascotaAdaptador;
+import com.saludo.tareaandroidsemana4.adapter.PerfilAdaptador;
+import com.saludo.tareaandroidsemana4.pojo.Mascota;
 
 import java.util.ArrayList;
 
@@ -25,7 +28,7 @@ public class PerfilFragment extends Fragment {
 
     private RecyclerView rvPerfil;
     ArrayList<Mascota> mascotas;
-    public Adaptador adaptador;
+    public MascotaAdaptador mascotaAdaptador;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -111,7 +114,7 @@ public class PerfilFragment extends Fragment {
 
     public void inicializarAdaptador(){
 
-        AdaptadorPerfil adaptador = new AdaptadorPerfil(mascotas, getActivity());
+        PerfilAdaptador adaptador = new PerfilAdaptador(mascotas, getActivity());
         rvPerfil.setAdapter(adaptador);
 
     }

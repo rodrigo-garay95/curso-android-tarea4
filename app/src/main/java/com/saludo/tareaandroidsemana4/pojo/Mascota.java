@@ -1,4 +1,4 @@
-package com.saludo.tareaandroidsemana4;
+package com.saludo.tareaandroidsemana4.pojo;
 
 public class Mascota {
     private String nombre;

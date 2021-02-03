@@ -1,4 +1,4 @@
-package com.saludo.tareaandroidsemana4;
+package com.saludo.tareaandroidsemana4.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -6,12 +6,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
+
+import com.saludo.tareaandroidsemana4.R;
+import com.saludo.tareaandroidsemana4.adapter.MascotaAdaptador;
+import com.saludo.tareaandroidsemana4.pojo.Mascota;
 
 import java.util.ArrayList;
 
-public class Favoritos extends AppCompatActivity {
+public class FavoritosActivity extends AppCompatActivity {
 
     private Toolbar miActionBar;
 
@@ -38,8 +40,8 @@ public class Favoritos extends AppCompatActivity {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         rvMascotasFav.setLayoutManager(llm);
 
-        Adaptador adaptador = new Adaptador(mascotas, this);
-        rvMascotasFav.setAdapter(adaptador);
+        MascotaAdaptador mascotaAdaptador = new MascotaAdaptador(mascotas, this);
+        rvMascotasFav.setAdapter(mascotaAdaptador);
 
     }
 }
